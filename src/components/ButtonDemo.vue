@@ -1,3 +1,3 @@
 <template>
-    <div>switch</div>
+    <div>Button</div>
 </template>

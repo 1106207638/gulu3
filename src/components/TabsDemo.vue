@@ -1,3 +1,3 @@
 <template>
-    <div>switch</div>
+  <div>Tabs</div>
 </template>

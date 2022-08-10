@@ -1,3 +1,3 @@
 <template>
-    <div>switch</div>
+    <div>dia</div>
 </template>
