@@ -5,13 +5,13 @@
       <aside v-if="menuVisible">
         <h2>组件列表</h2>
         <ol>
-          <li><router-link to="/doc/swich"> Switch 组件</router-link></li>
+          <li><router-link to="/doc/switch"> Switch 组件</router-link></li>
           <li><router-link to="/doc/button"> Button 组件</router-link></li>
           <li><router-link to="/doc/dialog"> Dialog 组件</router-link></li>
           <li><router-link to="/doc/tabs"> Tabs 组件</router-link></li>
         </ol>
       </aside>
-      <main>主内容</main>
+      <main><router-view></router-view></main>
     </div>
   </div>
 </template>
@@ -25,7 +25,7 @@ export default {
   setup() {
     const menuVisible = inject<Ref<boolean>>("menuVisible");
     console.log(menuVisible.value);
-    return{menuVisible}
+    return { menuVisible };
   },
 };
 </script>
