@@ -14,8 +14,9 @@ export default {
     router.afterEach(() => {
       if (width <= 500) {
         menuVisible.value = false;
+              console.log("wqefsdfdcx");
+
       }
-      console.log("wqefsdfdcx");
     });
   },
 };
