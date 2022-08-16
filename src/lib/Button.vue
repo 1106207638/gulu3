@@ -1,5 +1,5 @@
 <template>
-  <button class="gulu-button" :class="`theme-${theme}`"><slot /></button>
+  <button class="gulu-button" :class="`gulu-theme-${theme}`"><slot /></button>
 </template>
 <script lang="ts">
 export default {
