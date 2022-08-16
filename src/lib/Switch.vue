@@ -1,12 +1,14 @@
 <template>
-  <button class="gulu-switch" @click="toggle" :class="{ 'gulu-checked': value }">
+  <button
+    class="gulu-switch"
+    @click="toggle"
+    :class="{ 'gulu-checked': value }"
+  >
     <span></span>
   </button>
-  <div>{{ value }}</div>
 </template>
 <script lang="ts">
-import { ref } from "@vue/reactivity";
-
+import { ref } from "vue";
 export default {
   props: {
     value: Boolean,
@@ -14,16 +16,16 @@ export default {
   setup(props, context) {
     const toggle = () => {
       context.emit("update:value", !props.value);
-      console.log(props.value);
     };
     return { toggle };
   },
 };
 </script>
+
 <style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
-button {
+.gulu-switch {
   height: $h;
   width: $h * 2;
   border: none;
