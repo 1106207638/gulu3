@@ -1,20 +1,22 @@
 <template>
-  <template v-if="visible">
-    <div class="dialog-overlay" @click="onClickOverlay"></div>
-    <div class="dialog-wrapper">
-      <header>
-        <!-- {{title}} -->
-        <slot name="title" />
-        <div @click="close" class="gulu-span-close">222</div>
-      </header>
-      <main>
-        <slot name="content" />
-      </main>
-      <footer>
-        <Button @click="ok">OK</Button><Button @click="cancle">取消</Button>
-      </footer>
-    </div>
-  </template>
+  <Teleport to='body'>
+    <template v-if="visible">
+      <div class="dialog-overlay" @click="onClickOverlay"></div>
+      <div class="dialog-wrapper">
+        <header>
+          <!-- {{title}} -->
+          <slot name="title" />
+          <div @click="close" class="gulu-span-close">222</div>
+        </header>
+        <main>
+          <slot name="content" />
+        </main>
+        <footer>
+          <Button @click="ok">OK</Button><Button @click="cancle">取消</Button>
+        </footer>
+      </div>
+    </template>
+  </Teleport>
 </template>
 
 <script lang="ts">
