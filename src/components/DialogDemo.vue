@@ -6,7 +6,13 @@
     :closeOnClickOverlay="false"
     :ok="f1"
     :cancle="f2"
-  ></Dialog>
+  >
+    <template v-slot:title> <div>dasfsdgfdg</div></template>
+    <template v-slot:content>
+      <p>内容1</p>
+      <p>内容2</p>
+    </template>
+  </Dialog>
 </template>
 <script lang="ts">
 import Dialog from "../lib/Dialog.vue";

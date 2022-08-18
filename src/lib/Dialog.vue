@@ -3,12 +3,12 @@
     <div class="dialog-overlay" @click="onClickOverlay"></div>
     <div class="dialog-wrapper">
       <header>
-        标题
+        <!-- {{title}} -->
+        <slot name="title" />
         <div @click="close" class="gulu-span-close">222</div>
       </header>
       <main>
-        <p>内容1</p>
-        <p>内容2</p>
+        <slot name="content" />
       </main>
       <footer>
         <Button @click="ok">OK</Button><Button @click="cancle">取消</Button>
@@ -34,6 +34,10 @@ export default {
     },
     cancle: {
       type: Function,
+    },
+    title: {
+      type: String,
+      default: "标题",
     },
   },
   components: {
